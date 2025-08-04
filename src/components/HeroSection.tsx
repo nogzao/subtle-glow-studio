@@ -24,9 +24,9 @@ const HeroSection = () => {
         {/* Text Content */}
         <div className="space-y-8 text-center lg:text-left">
           <div className="space-y-4">
-            <h1 className="text-5xl lg:text-7xl font-serif font-bold text-foreground leading-tight">
+            <h1 className="text-6xl lg:text-8xl font-display font-black text-foreground leading-tight">
               Realce sua
-              <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="block gradient-hero bg-clip-text text-transparent">
                 beleza
               </span>
               sem perder sua essência
