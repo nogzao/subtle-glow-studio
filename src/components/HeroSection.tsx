@@ -61,7 +61,13 @@ const HeroSection = () => {
         {/* Hero Image */}
         <div className="relative lg:block hidden">
           <div className="relative">
-            <img src={heroImage} alt="Resultado natural do tratamento com Botox" className="rounded-3xl shadow-elegant w-full h-auto" />
+            <iframe 
+              src="https://player.vimeo.com/video/123456789?autoplay=1&loop=1&muted=1&background=1" 
+              className="rounded-3xl shadow-elegant w-full h-auto aspect-video"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="Resultado natural do tratamento com Botox"
+            ></iframe>
             <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-glow">
               <div className="text-center">
                 <div className="text-3xl font-serif font-bold text-primary">98%</div>
