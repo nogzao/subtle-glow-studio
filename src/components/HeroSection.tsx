@@ -1,21 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-woman.jpg";
-
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação gratuita para Botox.", "_blank");
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted to-secondary/10">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted to-secondary/10">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Mulher elegante representando os resultados naturais do Botox"
-          className="w-full h-full object-cover object-center opacity-20"
-        />
+        <img src={heroImage} alt="Mulher elegante representando os resultados naturais do Botox" className="w-full h-full object-cover object-center opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent"></div>
       </div>
 
@@ -24,7 +17,7 @@ const HeroSection = () => {
         {/* Text Content */}
         <div className="space-y-8 text-center lg:text-left">
           <div className="space-y-4">
-            <h1 className="text-6xl lg:text-8xl font-display font-black text-foreground leading-tight">
+            <h1 className="text-6xl lg:text-8xl font-display font-black text-foreground leading-tight mx-0 my-[10px]">
               Realce sua
               <span className="block gradient-hero bg-clip-text text-transparent">
                 beleza
@@ -38,21 +31,12 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button 
-              variant="elegant" 
-              size="lg" 
-              className="text-lg px-8 py-6 rounded-full"
-              onClick={handleWhatsAppClick}
-            >
+            <Button variant="elegant" size="lg" className="text-lg px-8 py-6 rounded-full" onClick={handleWhatsAppClick}>
               <MessageCircle className="w-5 h-5" />
               Avaliação Gratuita
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-6 rounded-full border-primary/20 hover:border-primary/40"
-            >
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6 rounded-full border-primary/20 hover:border-primary/40">
               Saiba Mais
             </Button>
           </div>
@@ -77,11 +61,7 @@ const HeroSection = () => {
         {/* Hero Image */}
         <div className="relative lg:block hidden">
           <div className="relative">
-            <img 
-              src={heroImage} 
-              alt="Resultado natural do tratamento com Botox"
-              className="rounded-3xl shadow-elegant w-full h-auto"
-            />
+            <img src={heroImage} alt="Resultado natural do tratamento com Botox" className="rounded-3xl shadow-elegant w-full h-auto" />
             <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-glow">
               <div className="text-center">
                 <div className="text-3xl font-serif font-bold text-primary">98%</div>
@@ -100,18 +80,11 @@ const HeroSection = () => {
 
       {/* Floating CTA */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button 
-          variant="whatsapp" 
-          size="lg" 
-          className="rounded-full shadow-lg animate-pulse"
-          onClick={handleWhatsAppClick}
-        >
+        <Button variant="whatsapp" size="lg" className="rounded-full shadow-lg animate-pulse" onClick={handleWhatsAppClick}>
           <MessageCircle className="w-5 h-5" />
           WhatsApp
         </Button>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
