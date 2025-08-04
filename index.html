@@ -21,6 +21,28 @@
   </head>
 
   <body>
+    <!-- Banner Promocional -->
+    <div class="promo-banner" id="promoBanner" style="background: linear-gradient(135deg, #f8c3d3, #d4af37); color: white; text-align: center; padding: 10px; font-weight: bold; font-size: 14px; position: relative; z-index: 1000;">
+      ESSA PROMOÇÃO É VÁLIDA ATÉ 18/06/2025
+    </div>
+
+    <script>
+      function getFormattedDate(daysAhead = 3) {
+        const today = new Date();
+        today.setDate(today.getDate() + daysAhead);
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const yyyy = today.getFullYear();
+        return `${dd}/${mm}/${yyyy}`;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const banner = document.getElementById("promoBanner");
+        const expirationDate = getFormattedDate(0); // Altere o número para mudar os dias
+        banner.textContent = `ESSA PROMOÇÃO É VÁLIDA ATÉ ${expirationDate}`;
+      });
+    </script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
