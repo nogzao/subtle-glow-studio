@@ -1,24 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Award, Users, Clock, Heart, MessageCircle } from "lucide-react";
 import doctorImage from "@/assets/doctor-portrait.jpg";
-
 const AboutSection = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Gostaria de conhecer mais sobre os tratamentos e agendar uma consulta.", "_blank");
   };
-
-  return (
-    <section id="sobre" className="py-20 bg-white">
+  return <section id="sobre" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Doctor Image */}
           <div className="relative">
             <div className="relative">
-              <img 
-                src={doctorImage}
-                alt="Dra. Especialista em Harmonização Facial"
-                className="w-full h-auto rounded-3xl shadow-elegant"
-              />
+              <img src={doctorImage} alt="Dra. Especialista em Harmonização Facial" className="w-full h-auto rounded-3xl shadow-elegant" />
               
               {/* Floating Credentials */}
               <div className="absolute -bottom-8 -right-8 bg-white rounded-2xl p-6 shadow-glow">
@@ -27,7 +20,7 @@ const AboutSection = () => {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-serif font-bold text-foreground">CRM Ativo</div>
+                    
                     <div className="text-sm text-muted-foreground">Especialista certificada</div>
                   </div>
                 </div>
@@ -157,12 +150,7 @@ const AboutSection = () => {
 
             {/* CTA */}
             <div className="pt-4">
-              <Button 
-                variant="elegant" 
-                size="lg" 
-                className="w-full sm:w-auto px-8 py-6 text-lg rounded-full"
-                onClick={handleWhatsAppClick}
-              >
+              <Button variant="elegant" size="lg" className="w-full sm:w-auto px-8 py-6 text-lg rounded-full" onClick={handleWhatsAppClick}>
                 <MessageCircle className="w-5 h-5" />
                 Conversar com a Dra. Alessandra
               </Button>
@@ -170,8 +158,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
