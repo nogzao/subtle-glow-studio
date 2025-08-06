@@ -14,17 +14,7 @@ const AboutSection = () => {
               <img src={doctorImage} alt="Dra. Especialista em Harmonização Facial" className="w-full h-auto rounded-3xl shadow-elegant" />
               
               {/* Floating Credentials */}
-              <div className="absolute -bottom-8 -right-8 bg-white rounded-2xl p-6 shadow-glow">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    
-                    <div className="text-sm text-muted-foreground">Especialista certificada</div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
 
