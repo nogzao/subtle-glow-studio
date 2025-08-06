@@ -46,34 +46,79 @@ const AboutSection = () => {
                 Dra. Alessandra Amaral
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Enfermeira especialista em estética há mais de 10 anos. 
-                Formada com especialização em Harmonização Facial e Medicina Estética.
+                Profissional com mais de 25 anos de atuação na área da Saúde e 9 anos de experiência especializada na área da Estética.
               </p>
             </div>
 
-            {/* Qualifications */}
+            {/* Academic Formation */}
             <div className="space-y-4">
               <h4 className="text-xl font-serif font-semibold text-foreground">
-                Formação e Certificações
+                Formação Acadêmica
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-muted-foreground">Graduação em Medicina - Universidade de São Paulo (USP)</span>
+                  <span className="text-muted-foreground">Graduação em Enfermagem - UNISUAM</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-muted-foreground">Pós-graduação em Medicina Estética - SBME</span>
+                  <span className="text-muted-foreground">Graduação em Biomedicina - Universidade Estácio de Sá</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-muted-foreground">Certificação Internacional em Toxina Botulínica</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-muted-foreground">Membro da Sociedade Brasileira de Medicina Estética</span>
+                  <span className="text-muted-foreground">Pós-Graduação em Cosmetologia Estética - FABA</span>
                 </li>
               </ul>
+            </div>
+
+            {/* Professional Experience */}
+            <div className="space-y-4">
+              <h4 className="text-xl font-serif font-semibold text-foreground">
+                Experiência Profissional
+              </h4>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span className="text-muted-foreground">8 anos de atuação como Enfermeira no Exército Brasileiro</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <span className="text-muted-foreground">Mais de 12 cursos extracurriculares especializados</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Specializations */}
+            <div className="space-y-4">
+              <h4 className="text-xl font-serif font-semibold text-foreground">
+                Especializações
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                  <span className="text-sm text-muted-foreground">Harmonização Facial</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                  <span className="text-sm text-muted-foreground">Gluteoplastia Não Cirúrgica</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                  <span className="text-sm text-muted-foreground">Intradermoterapia</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                  <span className="text-sm text-muted-foreground">Ozonioterapia</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                  <span className="text-sm text-muted-foreground">Microagulhamento</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                  <span className="text-sm text-muted-foreground">Jato de Plasma</span>
+                </div>
+              </div>
             </div>
 
             {/* Stats */}
@@ -82,15 +127,15 @@ const AboutSection = () => {
                 <div className="flex justify-center mb-3">
                   <Users className="w-8 h-8 text-primary" />
                 </div>
-                <div className="text-3xl font-serif font-bold text-foreground">500+</div>
-                <div className="text-sm text-muted-foreground">Pacientes atendidas</div>
+                <div className="text-3xl font-serif font-bold text-foreground">5.000+</div>
+                <div className="text-sm text-muted-foreground">Atendimentos realizados</div>
               </div>
               <div className="text-center bg-gradient-to-br from-accent/5 to-secondary/5 rounded-2xl p-6">
                 <div className="flex justify-center mb-3">
                   <Clock className="w-8 h-8 text-accent" />
                 </div>
-                <div className="text-3xl font-serif font-bold text-foreground">8+</div>
-                <div className="text-sm text-muted-foreground">Anos de experiência</div>
+                <div className="text-3xl font-serif font-bold text-foreground">25+</div>
+                <div className="text-sm text-muted-foreground">Anos na área da Saúde</div>
               </div>
             </div>
 
