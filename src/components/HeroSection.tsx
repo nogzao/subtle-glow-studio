@@ -5,7 +5,7 @@ const HeroSection = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação gratuita para Botox.", "_blank");
   };
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted to-secondary/10">
+  return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted to-secondary/10 pt-28">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img src={heroImage} alt="Mulher elegante representando os resultados naturais do Botox" className="w-full h-full object-cover object-center opacity-20" />
@@ -49,7 +49,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span>Médica especialista certificada</span>
+              <span>Enfermeira especialista certificada</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full"></div>

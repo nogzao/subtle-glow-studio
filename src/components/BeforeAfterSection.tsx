@@ -53,7 +53,7 @@ const BeforeAfterSection = () => {
   const [showAfter, setShowAfter] = useState(false);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background to-muted/30">
+    <section id="antes-depois" className="py-20 bg-gradient-to-br from-background to-muted/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -240,7 +240,7 @@ const BeforeAfterSection = () => {
                 garantindo resultados harmoniosos e naturais."
               </p>
               <div className="text-sm font-medium">
-                — Dra. Especialista em Harmonização Facial
+                — Dra. Alessandra Amaral, Enfermeira Especialista
               </div>
             </div>
           </div>

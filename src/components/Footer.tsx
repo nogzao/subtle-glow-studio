@@ -2,7 +2,7 @@ import { Heart, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-white py-16">
+    <footer id="contato" className="bg-foreground text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
@@ -97,7 +97,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-center mt-6 text-white/40 text-xs">
-            CRM/SP 123.456 - Dra. Maria Fernanda Silva | CNPJ: 12.345.678/0001-90
+            COREN/SP 123.456 - Dra. Alessandra Amaral | CNPJ: 12.345.678/0001-90
           </div>
         </div>
       </div>

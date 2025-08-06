@@ -8,8 +8,15 @@ const Header = () => {
     window.open(whatsappUrl, '_blank');
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-rose-100 z-50">
+    <header className="fixed top-14 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-rose-100 z-40">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -21,21 +28,36 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-primary hover:text-primary-dark transition-colors font-medium">
+            <button 
+              onClick={() => scrollToSection('inicio')} 
+              className="text-[#8B4513] hover:text-[#A0522D] transition-colors font-medium"
+            >
               Início
-            </a>
-            <a href="#beneficios" className="text-primary hover:text-primary-dark transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => scrollToSection('beneficios')} 
+              className="text-[#8B4513] hover:text-[#A0522D] transition-colors font-medium"
+            >
               Benefícios
-            </a>
-            <a href="#antes-depois" className="text-primary hover:text-primary-dark transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => scrollToSection('antes-depois')} 
+              className="text-[#8B4513] hover:text-[#A0522D] transition-colors font-medium"
+            >
               Resultados
-            </a>
-            <a href="#sobre" className="text-primary hover:text-primary-dark transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => scrollToSection('sobre')} 
+              className="text-[#8B4513] hover:text-[#A0522D] transition-colors font-medium"
+            >
               Sobre
-            </a>
-            <a href="#contato" className="text-primary hover:text-primary-dark transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => scrollToSection('contato')} 
+              className="text-[#8B4513] hover:text-[#A0522D] transition-colors font-medium"
+            >
               Contato
-            </a>
+            </button>
           </nav>
 
           <div className="flex items-center space-x-3">

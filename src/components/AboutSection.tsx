@@ -8,7 +8,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section id="sobre" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Doctor Image */}
@@ -43,11 +43,11 @@ const AboutSection = () => {
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> especialista</span>
               </h2>
               <h3 className="text-2xl font-serif text-primary mb-4">
-                Dra. Maria Fernanda Silva
+                Dra. Alessandra Amaral
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Médica especialista em Harmonização Facial com mais de 8 anos de experiência. 
-                Formada pela USP e pós-graduada em Medicina Estética pela SBME.
+                Enfermeira especialista em estética há mais de 10 anos. 
+                Formada com especialização em Harmonização Facial e Medicina Estética.
               </p>
             </div>
 
@@ -119,7 +119,7 @@ const AboutSection = () => {
                 onClick={handleWhatsAppClick}
               >
                 <MessageCircle className="w-5 h-5" />
-                Conversar com a Dra. Maria
+                Conversar com a Dra. Alessandra
               </Button>
             </div>
           </div>
