@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff } from "lucide-react";
 import beforeAfterImage from "@/assets/before-after.jpg";
+import type { BeforeAfterCase } from "./dashboard/ImageUploadDashboard";
 
-const beforeAfterCases = [
+interface DisplayCase {
+  id: number;
+  title: string;
+  age: string;
+  description: string;
+  image: string;
+  beforeImage?: string;
+  afterImage?: string;
+}
+
+const defaultCases: DisplayCase[] = [
   {
     id: 1,
     title: "Suavização de rugas da testa",
@@ -51,6 +62,41 @@ const beforeAfterCases = [
 const BeforeAfterSection = () => {
   const [selectedCase, setSelectedCase] = useState(0);
   const [showAfter, setShowAfter] = useState(false);
+  const [beforeAfterCases, setBeforeAfterCases] = useState<DisplayCase[]>(defaultCases);
+
+  // Load published cases from localStorage
+  useEffect(() => {
+    const savedCases = localStorage.getItem('beforeAfterCases');
+    if (savedCases) {
+      try {
+        const parsedCases: BeforeAfterCase[] = JSON.parse(savedCases);
+        const publishedCases: DisplayCase[] = parsedCases
+          .filter(case_ => case_.isPublished && case_.beforeImage && case_.afterImage)
+          .map(case_ => ({
+            id: case_.id,
+            title: case_.title,
+            age: case_.age,
+            description: case_.description,
+            image: case_.beforeImage, // Show before image initially
+            beforeImage: case_.beforeImage,
+            afterImage: case_.afterImage
+          }));
+        
+        if (publishedCases.length > 0) {
+          setBeforeAfterCases(publishedCases);
+        }
+      } catch (error) {
+        console.error('Error loading cases:', error);
+      }
+    }
+  }, []);
+
+  // Get current image (before or after)
+  const getCurrentImage = (caseIndex: number) => {
+    const currentCase = beforeAfterCases[caseIndex];
+    if (!currentCase || !currentCase.beforeImage) return beforeAfterImage;
+    return showAfter && currentCase.afterImage ? currentCase.afterImage : currentCase.beforeImage;
+  };
 
   return (
     <section id="antes-depois" className="py-20 bg-gradient-to-br from-background to-muted/30">
@@ -126,7 +172,7 @@ const BeforeAfterSection = () => {
                 onMouseLeave={() => setShowAfter(false)}
               >
                 <img 
-                  src={beforeAfterCases[selectedCase]?.image || beforeAfterImage}
+                  src={getCurrentImage(selectedCase)}
                   alt="Resultado detalhado do tratamento"
                   className="w-full h-auto rounded-2xl transition-elegant"
                 />
