@@ -7,14 +7,14 @@ import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import ImageUploadManager from "@/components/ImageUploadManager";
+import ImageUploadDashboard from "@/components/dashboard/ImageUploadDashboard";
 
 const Index = () => {
   // Verificar se estamos no modo de gerenciamento
-  const isManagementMode = window.location.hash === '#manage-images';
+  const isManagementMode = window.location.hash === '#manage-images' || window.location.hash === '#dashboard';
 
   if (isManagementMode) {
-    return <ImageUploadManager />;
+    return <ImageUploadDashboard />;
   }
 
   return (
