@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Award, Users, Clock, Heart, MessageCircle } from "lucide-react";
-import doctorImage from "@/assets/doctor-portrait.jpg";
+import doctorImage from "/lovable-uploads/18f9e48d-f26f-4ed0-b2f5-b472ca5ba417.png";
 const AboutSection = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Gostaria de conhecer mais sobre os tratamentos e agendar uma consulta.", "_blank");

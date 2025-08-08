@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff } from "lucide-react";
 import beforeAfterImage from "@/assets/before-after.jpg";
-import type { BeforeAfterCase } from "./dashboard/ImageUploadDashboard";
+import { beforeAfterService, type BeforeAfterCase } from "@/lib/supabase";
 
 interface DisplayCase {
   id: number;
@@ -64,13 +64,12 @@ const BeforeAfterSection = () => {
   const [showAfter, setShowAfter] = useState(false);
   const [beforeAfterCases, setBeforeAfterCases] = useState<DisplayCase[]>(defaultCases);
 
-  // Load published cases from localStorage
+  // Load published cases from Supabase
   useEffect(() => {
-    const savedCases = localStorage.getItem('beforeAfterCases');
-    if (savedCases) {
+    const loadCases = async () => {
       try {
-        const parsedCases: BeforeAfterCase[] = JSON.parse(savedCases);
-        const publishedCases: DisplayCase[] = parsedCases
+        const cases = await beforeAfterService.getCases();
+        const publishedCases: DisplayCase[] = cases
           .filter(case_ => case_.isPublished && case_.beforeImage && case_.afterImage)
           .map(case_ => ({
             id: case_.id,
@@ -88,7 +87,9 @@ const BeforeAfterSection = () => {
       } catch (error) {
         console.error('Error loading cases:', error);
       }
-    }
+    };
+
+    loadCases();
   }, []);
 
   // Get current image (before or after)

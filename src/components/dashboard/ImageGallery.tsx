@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Edit, Eye, MoreVertical } from "lucide-react";
-import { BeforeAfterCase } from "./ImageUploadDashboard";
+import { type BeforeAfterCase } from "@/lib/supabase";
 import {
   DropdownMenu,
   DropdownMenuContent,

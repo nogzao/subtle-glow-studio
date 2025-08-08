@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Upload, X, Eye, EyeOff, Save, Trash2, Check } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
-import { BeforeAfterCase } from "./ImageUploadDashboard";
+import { type BeforeAfterCase } from "@/lib/supabase";
 import { toast } from "sonner";
 
 interface ImageUploadCardProps {
