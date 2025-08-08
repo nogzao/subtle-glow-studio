@@ -126,7 +126,7 @@ const BeforeAfterSection = () => {
                   onMouseEnter={() => setSelectedCase(index)}
                 >
                   <img 
-                    src={case_.image}
+                    src={case_.beforeImage || case_.image}
                     alt={`Resultado: ${case_.title}`}
                     className="w-full h-64 object-cover rounded-xl transition-elegant group-hover:scale-105"
                   />
@@ -192,6 +192,7 @@ const BeforeAfterSection = () => {
                     variant="outline" 
                     size="sm" 
                     className="bg-white/90 backdrop-blur-sm border-white/20 hover:bg-primary hover:text-white hover:border-primary"
+                    onClick={() => setShowAfter(!showAfter)}
                   >
                     {showAfter ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                     {showAfter ? 'Ocultar' : 'Ver resultado'}
