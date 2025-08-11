@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-woman.jpg";
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
@@ -16,19 +16,17 @@ const HeroSection = () => {
         <div className="space-y-8 text-center">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-black text-foreground leading-tight">
-              Realce sua
-              <span className="block gradient-hero bg-clip-text text-transparent">beleza</span>
-              sem perder sua essência
+              Realce sua <span className="gradient-hero bg-clip-text text-transparent">beleza</span> sem perder sua essência
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-light leading-relaxed mx-auto max-w-3xl">
-              Botox com precisão médica e resultados sutis — como deve ser.
+              Botox com precisão cirúrgica e resultados sutis — como deve ser.
             </p>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="elegant" size="lg" className="text-lg px-8 py-6 rounded-full" onClick={handleWhatsAppClick}>
-              <MessageCircle className="w-5 h-5" />
+              <img src="/lovable-uploads/dcac6424-25a8-4f73-bf35-b35aef5c9bd0.png" alt="Ícone do WhatsApp" className="w-5 h-5" />
               Fale no WhatsApp
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -45,7 +43,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span>Enfermeira especialista certificada</span>
+              <span>Profissional especialista certificada</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full"></div>
@@ -58,7 +56,7 @@ const HeroSection = () => {
       {/* Floating CTA */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button variant="whatsapp" size="lg" className="rounded-full shadow-lg animate-pulse" onClick={handleWhatsAppClick}>
-          <MessageCircle className="w-5 h-5" />
+          <img src="/lovable-uploads/dcac6424-25a8-4f73-bf35-b35aef5c9bd0.png" alt="Ícone do WhatsApp" className="w-5 h-5" />
           WhatsApp
         </Button>
       </div>

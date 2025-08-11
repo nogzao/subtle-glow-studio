@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Award, Users, Clock, Heart, MessageCircle } from "lucide-react";
+import { Award, Users, Clock, Heart } from "lucide-react";
 import doctorImage from "/lovable-uploads/18f9e48d-f26f-4ed0-b2f5-b472ca5ba417.png";
 const AboutSection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de conhecer mais sobre os tratamentos e agendar uma consulta.", "_blank");
+    window.open("https://wa.me/5521970092543?text=Olá! Gostaria de conhecer mais sobre os tratamentos e agendar uma consulta.", "_blank");
   };
   return <section id="sobre" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -141,7 +141,7 @@ const AboutSection = () => {
             {/* CTA */}
             <div className="pt-4">
               <Button variant="elegant" size="lg" className="w-full sm:w-auto px-8 py-6 text-lg rounded-full" onClick={handleWhatsAppClick}>
-                <MessageCircle className="w-5 h-5" />
+                <img src="/lovable-uploads/dcac6424-25a8-4f73-bf35-b35aef5c9bd0.png" alt="Ícone do WhatsApp" className="w-5 h-5" />
                 Conversar com a Dra. Alessandra
               </Button>
             </div>

@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, Calendar, ArrowRight } from "lucide-react";
 const CTASection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar minha avaliação gratuita para Botox. Quando temos disponibilidade?", "_blank");
+    window.open("https://wa.me/5521970092543?text=Olá! Gostaria de agendar minha avaliação gratuita para Botox. Quando temos disponibilidade?", "_blank");
   };
   const handleCallClick = () => {
-    window.open("tel:+5511999999999", "_self");
+    window.open("tel:+5521970092543", "_self");
   };
   return <section className="py-20 bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
       {/* Background Pattern */}
@@ -50,7 +50,7 @@ const CTASection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="outline" size="lg" className="bg-white text-primary hover:bg-white/90 border-white px-8 py-6 text-lg rounded-full font-semibold shadow-glow" onClick={handleWhatsAppClick}>
-              <MessageCircle className="w-6 h-6" />
+              <img src="/lovable-uploads/dcac6424-25a8-4f73-bf35-b35aef5c9bd0.png" alt="Ícone do WhatsApp" className="w-6 h-6" />
               Agendar pelo WhatsApp
               <ArrowRight className="w-5 h-5" />
             </Button>

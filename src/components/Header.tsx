@@ -1,10 +1,10 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const handleWhatsAppClick = () => {
     const message = "Olá! Gostaria de saber mais sobre os tratamentos de Botox.";
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5521970092543?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -67,7 +67,7 @@ const Header = () => {
               onClick={handleWhatsAppClick}
               className="hidden sm:flex items-center space-x-2 border-primary text-primary hover:bg-primary hover:text-white"
             >
-              <MessageCircle className="h-4 w-4" />
+              <img src="/lovable-uploads/dcac6424-25a8-4f73-bf35-b35aef5c9bd0.png" alt="Ícone do WhatsApp" className="h-4 w-4" />
               <span>WhatsApp</span>
             </Button>
             
