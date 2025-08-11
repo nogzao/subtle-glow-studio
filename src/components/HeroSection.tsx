@@ -3,7 +3,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-woman.jpg";
 const HeroSection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma avaliação gratuita para Botox.", "_blank");
+    window.open("https://wa.me/5521970092543?text=Olá! Gostaria de agendar uma avaliação gratuita para Botox.", "_blank");
   };
   return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted to-secondary/10 pt-28">
       {/* Background Image with Overlay */}
@@ -12,25 +12,21 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent"></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Text Content */}
-        <div className="space-y-8 text-center lg:text-left">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="space-y-8 text-center">
           <div className="space-y-4">
-            <h1 className="text-6xl lg:text-8xl font-display font-black text-foreground leading-tight mx-0 my-[10px]">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-black text-foreground leading-tight">
               Realce sua
-              <span className="block gradient-hero bg-clip-text text-transparent">
-                beleza
-              </span>
+              <span className="block gradient-hero bg-clip-text text-transparent">beleza</span>
               sem perder sua essência
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-light leading-relaxed mx-auto max-w-3xl">
               Botox com precisão médica e resultados sutis — como deve ser.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="elegant" size="lg" className="text-lg px-8 py-6 rounded-full" onClick={handleWhatsAppClick}>
               <MessageCircle className="w-5 h-5" />
               Fale no WhatsApp
@@ -42,7 +38,7 @@ const HeroSection = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-sm text-muted-foreground">
+          <div className="flex flex-wrap gap-6 justify-center text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-accent rounded-full"></div>
               <span>+500 procedimentos realizados</span>
@@ -57,7 +53,6 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-
       </div>
 
       {/* Floating CTA */}

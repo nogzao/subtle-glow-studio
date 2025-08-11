@@ -12,72 +12,35 @@ interface DisplayCase {
   beforeImage?: string;
   afterImage?: string;
 }
-const defaultCases: DisplayCase[] = [{
-  id: 1,
-  title: "Suavização de rugas da testa",
-  age: "39 anos",
-  description: "Resultado natural mantendo expressões faciais",
-  image: beforeAfterImage
-}, {
-  id: 2,
-  title: "Linhas de expressão nos olhos",
-  age: "44 anos",
-  description: "Olhar mais descansado e jovial",
-  image: beforeAfterImage
-}, {
-  id: 3,
-  title: "Rugas entre sobrancelhas",
-  age: "41 anos",
-  description: "Expressão mais suave e relaxada",
-  image: beforeAfterImage
-}, {
-  id: 4,
-  title: "Harmonização completa",
-  age: "36 anos",
-  description: "Rejuvenescimento facial sutil e elegante",
-  image: beforeAfterImage
-}, {
-  id: 5,
-  title: "Prevenção de rugas",
-  age: "32 anos",
-  description: "Botox preventivo com resultado imperceptível",
-  image: beforeAfterImage
-}, {
-  id: 6,
-  title: "Lifting de sobrancelhas",
-  age: "48 anos",
-  description: "Olhar mais aberto e rejuvenescido",
-  image: beforeAfterImage
-}];
+const defaultCases: DisplayCase[] = [
+  {
+    id: 1,
+    title: "Antes e Depois 1",
+    age: "",
+    description: "",
+    image: "/lovable-uploads/a012f4a9-a02b-438c-aefa-3ef1925eb633.png"
+  },
+  {
+    id: 2,
+    title: "Antes e Depois 2",
+    age: "",
+    description: "",
+    image: "/lovable-uploads/5044ffd2-cebe-4ee4-8227-1b322cea4e67.png"
+  },
+  {
+    id: 3,
+    title: "Antes e Depois 3",
+    age: "",
+    description: "",
+    image: "/lovable-uploads/039ffd54-d2e1-4abf-8d59-ad0a22ccf91d.png"
+  }
+];
 const BeforeAfterSection = () => {
   const [selectedCase, setSelectedCase] = useState(0);
   const [showAfter, setShowAfter] = useState(false);
   const [beforeAfterCases, setBeforeAfterCases] = useState<DisplayCase[]>(defaultCases);
 
-  // Load published cases from Supabase
-  useEffect(() => {
-    const loadCases = async () => {
-      try {
-        const cases = await beforeAfterService.getCases();
-        const publishedCases: DisplayCase[] = cases.filter(case_ => case_.isPublished && case_.beforeImage && case_.afterImage).map(case_ => ({
-          id: case_.id,
-          title: case_.title,
-          age: case_.age,
-          description: case_.description,
-          image: case_.beforeImage,
-          // Show before image initially
-          beforeImage: case_.beforeImage,
-          afterImage: case_.afterImage
-        }));
-        if (publishedCases.length > 0) {
-          setBeforeAfterCases(publishedCases);
-        }
-      } catch (error) {
-        console.error('Error loading cases:', error);
-      }
-    };
-    loadCases();
-  }, []);
+  // Supabase fetch desabilitado: usando imagens estáticas enviadas
 
   // Get current image (before or after)
   const getCurrentImage = (caseIndex: number) => {
@@ -121,17 +84,11 @@ const BeforeAfterSection = () => {
                     <h4 className="font-serif font-semibold text-white text-sm mb-1">
                       {case_.title}
                     </h4>
-                    <p className="text-accent text-xs">{case_.age}</p>
+                    
                   </div>
                 </div>
               </div>
               
-              {/* Description */}
-              <div className="mt-4 text-center">
-                <p className="text-muted-foreground text-sm">
-                  {case_.description}
-                </p>
-              </div>
             </div>)}
         </div>
 

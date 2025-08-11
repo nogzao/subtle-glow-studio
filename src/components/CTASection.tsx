@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, Calendar, ArrowRight } from "lucide-react";
 const CTASection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar minha avaliação gratuita para Botox. Quando temos disponibilidade?", "_blank");
+    window.open("https://wa.me/5521970092543?text=Olá! Gostaria de agendar minha avaliação gratuita para Botox. Quando temos disponibilidade?", "_blank");
   };
   const handleCallClick = () => {
-    window.open("tel:+5511999999999", "_self");
+    window.open("tel:+5521970092543", "_self");
   };
   return <section className="py-20 bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
       {/* Background Pattern */}
@@ -70,15 +70,15 @@ const CTASection = () => {
               <div className="text-center">
                 <h4 className="font-serif font-semibold mb-2">Localização</h4>
                 <p className="text-white/80 text-sm">
-                  Rua das Flores, 123<br />
-                  Jardins - São Paulo/SP
+                  Av. Olegário Maciel, 231, Sala 203<br />
+                  Barra da Tijuca, Rio de Janeiro - RJ<br />
+                  22621-200
                 </p>
               </div>
               <div className="text-center">
                 <h4 className="font-serif font-semibold mb-2">Contato</h4>
                 <p className="text-white/80 text-sm">
-                  (11) 99999-9999<br />
-                  contato@belezzaestetica.com.br
+                  21970092543
                 </p>
               </div>
             </div>

@@ -2,7 +2,7 @@ import { Heart, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 const Footer = () => {
   return <footer id="contato" className="bg-foreground text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-6">
             <div>
@@ -12,7 +12,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-elegant">
+              <a href="https://instagram.com/instituto.amaral" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-elegant">
                 <Instagram className="w-5 h-5" />
               </a>
               
@@ -37,37 +37,15 @@ const Footer = () => {
             <div className="space-y-3 text-white/80">
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span>(11) 99999-9999</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary" />
-                <span>contato@belezzaestetica.com.br</span>
+                <span>21970092543</span>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-1" />
-                <span>Rua das Flores, 123<br />Jardins - São Paulo/SP</span>
+                <span>Av. Olegário Maciel, 231, Sala 203<br />Barra da Tijuca, Rio de Janeiro - RJ<br />22621-200</span>
               </div>
             </div>
           </div>
 
-          {/* Horários */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-serif font-semibold">Horário de Funcionamento</h4>
-            <div className="space-y-3 text-white/80">
-              <div>
-                <div className="font-medium">Segunda a Sexta</div>
-                <div>9:00 - 18:00</div>
-              </div>
-              <div>
-                <div className="font-medium">Sábados</div>
-                <div>9:00 - 14:00</div>
-              </div>
-              <div>
-                <div className="font-medium">Domingos</div>
-                <div>Fechado</div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Bottom */}
