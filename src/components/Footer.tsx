@@ -1,8 +1,6 @@
 import { Heart, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer id="contato" className="bg-foreground text-white py-16">
+  return <footer id="contato" className="bg-foreground text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
@@ -14,22 +12,10 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-elegant"
-              >
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-elegant">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-elegant"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
+              
             </div>
           </div>
 
@@ -91,15 +77,13 @@ const Footer = () => {
               © 2024 Amaral Instituto. Todos os direitos reservados.
             </div>
             <div className="flex items-center gap-2 text-white/60 text-sm">
-              <span>Feito com</span>
-              <Heart className="w-4 h-4 text-red-400" />
+              
+              
               <span>para realçar sua beleza natural</span>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

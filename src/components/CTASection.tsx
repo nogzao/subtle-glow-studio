@@ -1,17 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, Calendar, ArrowRight } from "lucide-react";
-
 const CTASection = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar minha avaliação gratuita para Botox. Quando temos disponibilidade?", "_blank");
   };
-
   const handleCallClick = () => {
     window.open("tel:+5511999999999", "_self");
   };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
+  return <section className="py-20 bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-white/20 blur-xl"></div>
@@ -53,22 +49,12 @@ const CTASection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 border-white px-8 py-6 text-lg rounded-full font-semibold shadow-glow"
-              onClick={handleWhatsAppClick}
-            >
+            <Button variant="outline" size="lg" className="bg-white text-primary hover:bg-white/90 border-white px-8 py-6 text-lg rounded-full font-semibold shadow-glow" onClick={handleWhatsAppClick}>
               <MessageCircle className="w-6 h-6" />
               Agendar pelo WhatsApp
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button 
-              variant="ghost" 
-              size="lg" 
-              className="text-white hover:bg-white/10 border border-white/30 px-8 py-6 text-lg rounded-full"
-              onClick={handleCallClick}
-            >
+            <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 border border-white/30 px-8 py-6 text-lg rounded-full" onClick={handleCallClick}>
               <Phone className="w-5 h-5" />
               Ligar Agora
             </Button>
@@ -78,11 +64,8 @@ const CTASection = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mt-12">
             <div className="grid md:grid-cols-3 gap-6 text-white">
               <div className="text-center">
-                <h4 className="font-serif font-semibold mb-2">Horário de Funcionamento</h4>
-                <p className="text-white/80 text-sm">
-                  Segunda a Sexta: 9h às 18h<br />
-                  Sábados: 9h às 14h
-                </p>
+                
+                
               </div>
               <div className="text-center">
                 <h4 className="font-serif font-semibold mb-2">Localização</h4>
@@ -108,8 +91,6 @@ const CTASection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CTASection;
