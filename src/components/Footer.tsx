@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-serif font-bold mb-2">Belezza Estética</h3>
+              <h3 className="text-2xl font-serif font-bold mb-2">Amaral Instituto</h3>
               <p className="text-white/80 leading-relaxed">
                 Especialistas em Botox com resultados naturais. Realçando sua beleza com segurança e profissionalismo.
               </p>
@@ -88,16 +88,13 @@ const Footer = () => {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-white/60 text-sm">
-              © 2024 Belezza Estética. Todos os direitos reservados.
+              © 2024 Amaral Instituto. Todos os direitos reservados.
             </div>
             <div className="flex items-center gap-2 text-white/60 text-sm">
               <span>Feito com</span>
               <Heart className="w-4 h-4 text-red-400" />
               <span>para realçar sua beleza natural</span>
             </div>
-          </div>
-          <div className="text-center mt-6 text-white/40 text-xs">
-            COREN/SP 123.456 - Dra. Alessandra Amaral | CNPJ: 12.345.678/0001-90
           </div>
         </div>
       </div>

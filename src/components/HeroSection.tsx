@@ -33,7 +33,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button variant="elegant" size="lg" className="text-lg px-8 py-6 rounded-full" onClick={handleWhatsAppClick}>
               <MessageCircle className="w-5 h-5" />
-              Avaliação Gratuita
+              Fale no WhatsApp
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6 rounded-full border-primary/20 hover:border-primary/40">
@@ -58,30 +58,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Hero Image */}
-        <div className="relative lg:block hidden">
-          <div className="relative">
-            <iframe 
-              src="https://player.vimeo.com/video/123456789?autoplay=1&loop=1&muted=1&background=1" 
-              className="rounded-3xl shadow-elegant w-full h-auto aspect-video"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              title="Resultado natural do tratamento com Botox"
-            ></iframe>
-            <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-glow">
-              <div className="text-center">
-                <div className="text-3xl font-serif font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">satisfação garantida</div>
-              </div>
-            </div>
-            <div className="absolute -top-6 -right-6 bg-accent/90 backdrop-blur-sm rounded-2xl p-6 shadow-glow">
-              <div className="text-center">
-                <div className="text-3xl font-serif font-bold text-white">15min</div>
-                <div className="text-sm text-white/80">procedimento rápido</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Floating CTA */}

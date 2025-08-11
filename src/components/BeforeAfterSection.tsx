@@ -163,7 +163,7 @@ const BeforeAfterSection = () => {
         </div>
 
         {/* Featured Before/After Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl p-8 lg:p-12">
+        <div className="grid grid-cols-1 gap-12 items-center bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl p-8 lg:p-12">
           {/* Large Image */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl shadow-elegant bg-white p-2">
@@ -219,79 +219,6 @@ const BeforeAfterSection = () => {
             </div>
           </div>
 
-          {/* Featured Case Details */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-3xl font-display font-bold text-foreground mb-4">
-                Caso em destaque
-              </h3>
-              <div className="bg-white/80 rounded-2xl p-6 shadow-elegant">
-                <h4 className="text-xl font-serif font-semibold text-foreground mb-3">
-                  {beforeAfterCases[selectedCase]?.title}
-                </h4>
-                <p className="text-lg text-primary font-medium mb-4">
-                  {beforeAfterCases[selectedCase]?.age}
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {beforeAfterCases[selectedCase]?.description}
-                </p>
-                
-                {/* Treatment Details */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-primary/5 rounded-lg p-4">
-                    <div className="text-sm text-muted-foreground mb-1">Técnica</div>
-                    <div className="font-semibold text-foreground">Botox Premium</div>
-                  </div>
-                  <div className="bg-accent/5 rounded-lg p-4">
-                    <div className="text-sm text-muted-foreground mb-1">Duração</div>
-                    <div className="font-semibold text-foreground">20 minutos</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mini Gallery */}
-            <div>
-              <h4 className="text-lg font-serif font-semibold text-foreground mb-4">
-                Outros casos de sucesso
-              </h4>
-              <div className="grid grid-cols-3 gap-3">
-                {beforeAfterCases.map((case_, index) => (
-                  <div 
-                    key={case_.id}
-                    className={`relative cursor-pointer rounded-lg overflow-hidden transition-elegant ${
-                      selectedCase === index 
-                        ? 'ring-2 ring-primary shadow-glow' 
-                        : 'hover:ring-1 hover:ring-primary/50'
-                    }`}
-                    onClick={() => setSelectedCase(index)}
-                  >
-                    <img 
-                      src={case_.image}
-                      alt={case_.title}
-                      className="w-full h-16 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                      <span className="text-white text-xs font-medium">
-                        {index + 1}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Professional Note */}
-            <div className="gradient-primary rounded-2xl p-6 text-white">
-              <p className="text-sm leading-relaxed italic mb-4">
-                "Cada tratamento é personalizado considerando a anatomia facial única de cada paciente, 
-                garantindo resultados harmoniosos e naturais."
-              </p>
-              <div className="text-sm font-medium">
-                — Dra. Alessandra Amaral, Enfermeira Especialista
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
