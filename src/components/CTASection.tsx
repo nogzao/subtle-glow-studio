@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, Calendar, ArrowRight } from "lucide-react";
 const CTASection = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5521970092543?text=Olá! Gostaria de agendar minha avaliação gratuita para Botox. Quando temos disponibilidade?", "_blank");
+    window.open("https://wa.me/5511999999999?text=Olá! Gostaria de agendar minha avaliação gratuita para Botox. Quando temos disponibilidade?", "_blank");
   };
   const handleCallClick = () => {
-    window.open("tel:+5521970092543", "_self");
+    window.open("tel:+5511999999999", "_self");
   };
   return <section className="py-20 bg-gradient-to-br from-primary via-primary to-accent relative overflow-hidden">
       {/* Background Pattern */}
@@ -61,28 +61,7 @@ const CTASection = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mt-12">
-            <div className="grid md:grid-cols-3 gap-6 text-white">
-              <div className="text-center">
-                
-                
-              </div>
-              <div className="text-center">
-                <h4 className="font-serif font-semibold mb-2">Localização</h4>
-                <p className="text-white/80 text-sm">
-                  Av. Olegário Maciel, 231, Sala 203<br />
-                  Barra da Tijuca, Rio de Janeiro - RJ<br />
-                  22621-200
-                </p>
-              </div>
-              <div className="text-center">
-                <h4 className="font-serif font-semibold mb-2">Contato</h4>
-                <p className="text-white/80 text-sm">
-                  21970092543
-                </p>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Urgency */}
           <div className="inline-flex items-center gap-2 bg-accent/20 text-white font-medium px-6 py-3 rounded-full">
